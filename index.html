@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Motivation App</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      font-family: "Segoe UI", sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    #quote {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      min-height: 60px;
+    }
+    button {
+      background: #ffdd57;
+      color: #333;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #f6c90e;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>✨ Daily Motivation ✨</h1>
+    <div id="quote">Click the button for inspiration!</div>
+    <button onclick="newQuote()">Inspire Me</button>
+    <footer>Made with ❤️ using HTML, CSS & JS</footer>
+  </div>
+
+  <script>
+    const quotes = [
+      "Believe in yourself and all that you are.",
+      "Every day is a second chance.",
+      "Push yourself, because no one else is going to do it for you.",
+      "Dream it. Wish it. Do it.",
+      "Stay positive, work hard, make it happen.",
+      "Don’t stop until you’re proud.",
+      "Success is not for the lazy.",
+      "Small steps every day lead to big results.",
+      "Your only limit is your mind.",
+      "Difficult roads often lead to beautiful destinations."
+    ];
+
+    function newQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
